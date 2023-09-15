@@ -40,7 +40,7 @@ on:keydown|preventDefault={onKeyDown}
 
 <main class="relative overflow-hidden top-">
     <div class="m-auto">
-        <h1 class="text-9xl font-bold text-center center text-white">
+        <h1 class="text-xl font-bold text-center center text-white">
             You should listen to my presentaion instead of being on your phone dummy
         </h1>
 </main>
@@ -49,7 +49,7 @@ on:keydown|preventDefault={onKeyDown}
     main{
         margin-top: -24px;
     }
-    :global(html) {
+    :global(body) {
         background: #F15156;
         background: linear-gradient(90deg, #F15156 0%,#721121 100%);
         overflow-y: hidden;
