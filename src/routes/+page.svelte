@@ -6,7 +6,7 @@
         if(e.keyCode == 39){
             page += 1
         }
-        if(e.keyCode == 37){
+        if(e.keyCode == 37  && (page-1) != 0){
             page -= 1
         }
     }
@@ -21,12 +21,12 @@ on:keydown|preventDefault={onKeyDown}
 <div class="color black">
 <h1 class="sticky top-0 z-50 text-white">Page {page}</h1>
 </div>
-<main class="relative overflow-hidden top-">
+<main class="relative overflow-hidden ">
 {#if page <= 1}
 <div class="flex h-screen">
     <div class="m-auto">
 <h1 class="text-9xl font-bold text-center center text-white">
-    Fabian's amazing presentaion
+    Fabian's amazing presentation
 </h1>
 </div>
 </div>
@@ -41,7 +41,7 @@ on:keydown|preventDefault={onKeyDown}
 <div class="relative overflow-hidden top-">
     <div class="m-auto">
         <h1 class="text-xl font-bold text-center center text-white">
-            You should listen to my presentaion instead of being on your phone dummy
+            You should listen to my presentation instead of being on your phone dummy
         </h1>
     </div>
 </div>
