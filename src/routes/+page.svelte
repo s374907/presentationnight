@@ -12,7 +12,7 @@
         }
     }
 </script>
-{#if !Device.ismobile}
+{#if !Device.isPhone}
 <h1>Page {page}</h1>
 {#if page == 1}
 <h1 class="text-3xl font-bold underline text-center center">
