@@ -1,7 +1,6 @@
-<script context="module">
-    import Device from 'svelte-device-info'
+<script>   
     import Page2 from "../slides/+2.svelte";
-    console.log(Device)
+    import Device from 'svelte-device-info';
     let page = 1
     function onKeyDown(e){
         if(e.keyCode == 39){
@@ -12,7 +11,7 @@
         }
     }
 </script>
-{#if !Device.isphone}
+{#if !Device.isMobile || !Device.isPhone}
 <h1>Page {page}</h1>
 {#if page == 1}
 <h1 class="text-3xl font-bold underline text-center center">
