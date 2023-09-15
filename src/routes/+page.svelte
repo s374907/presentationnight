@@ -1,6 +1,6 @@
 <script>   
     import Page2 from "../slides/+2.svelte";
-    import Device from 'svelte-device-info';
+    $: outerWidth = 900;
     let page = 1
     function onKeyDown(e){
         if(e.keyCode == 39){
@@ -11,7 +11,12 @@
         }
     }
 </script>
-{#if !Device.isMobile || !Device.isPhone}
+<svelte:window 
+bind:outerWidth
+on:keydown|preventDefault={onKeyDown} 
+/>
+
+{#if outerWidth > 800}
 <h1>Page {page}</h1>
 {#if page == 1}
 <h1 class="text-3xl font-bold underline text-center center">
@@ -23,9 +28,7 @@
 {/if}
 {:else}
 <h1>you are on mobile</h1>
-{/if}
-<svelte:window on:keydown|preventDefault={onKeyDown} />
-  
+{/if}  
   <style lang="postcss">
     :global(html) {
         background: #F9C784;
