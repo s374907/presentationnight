@@ -11,27 +11,47 @@
         }
     }
 </script>
+
 <svelte:window 
 bind:outerWidth
 on:keydown|preventDefault={onKeyDown} 
 />
 
 {#if outerWidth > 800}
-<h1>Page {page}</h1>
-{#if page == 1}
-<h1 class="text-3xl font-bold underline text-center center">
-    Hello world!
+<div class="color black">
+<h1 class="sticky top-0 z-50 text-white">Page {page}</h1>
+</div>
+<main class="relative overflow-hidden top-">
+{#if page <= 1}
+<div class="flex h-screen">
+    <div class="m-auto">
+<h1 class="text-9xl font-bold text-center center text-white">
+    Fabian's amazing presentaion
 </h1>
+</div>
+</div>
 {/if}
 {#if page == 2}
 <Page2/>
 {/if}
+</main>
+
 {:else}
-<h1>you are on mobile</h1>
+
+<main class="relative overflow-hidden top-">
+    <div class="m-auto">
+        <h1 class="text-9xl font-bold text-center center text-white">
+            You should listen to my presentaion instead of being on your phone dummy
+        </h1>
+</main>
 {/if}  
   <style lang="postcss">
+    main{
+        margin-top: -24px;
+    }
     :global(html) {
-        background: #F9C784;
-        background: linear-gradient(120deg, #F9C784 0%, #FF8C42 100%);
+        background: #F15156;
+        background: linear-gradient(90deg, #F15156 0%,#721121 100%);
+        overflow-y: hidden;
     }
   </style>
