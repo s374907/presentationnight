@@ -38,12 +38,13 @@ on:keydown|preventDefault={onKeyDown}
 
 {:else}
 
-<main class="relative overflow-hidden top-">
+<div class="relative overflow-hidden top-">
     <div class="m-auto">
         <h1 class="text-xl font-bold text-center center text-white">
             You should listen to my presentaion instead of being on your phone dummy
         </h1>
-</main>
+    </div>
+</div>
 {/if}  
   <style lang="postcss">
     main{
