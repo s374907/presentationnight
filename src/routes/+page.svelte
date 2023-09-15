@@ -22,6 +22,8 @@
 {#if page == 2}
 <Page2/>
 {/if}
+{:else}
+<h1>you are on mobile</h1>
 {/if}
 <svelte:window on:keydown|preventDefault={onKeyDown} />
   
