@@ -53,5 +53,6 @@ on:keydown|preventDefault={onKeyDown}
         background: #F15156;
         background: linear-gradient(90deg, #F15156 0%,#721121 100%);
         overflow-y: hidden;
+        float: none !important;margin: 0 auto !important;
     }
   </style>
