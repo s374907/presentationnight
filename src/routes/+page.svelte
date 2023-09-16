@@ -7,6 +7,8 @@
     function onKeyDown(e){
         if(e.keyCode == 39 && (page+1) != 64){
             page += 1
+        }else if((page+1) == 64){
+            page = 1
         }
         if(e.keyCode == 37  && (page-1) != 0){
             page -= 1
