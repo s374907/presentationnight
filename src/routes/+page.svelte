@@ -52,7 +52,7 @@ on:keydown|preventDefault={onKeyDown}
     main{
         margin-top: -24px;
     }
-    :global(html,body){height:100%;}
+    :global(html,body){height:120%;}
     :global(body) {
         background: #F15156;
         background: linear-gradient(90deg, #F15156 0%,#721121 100%);
