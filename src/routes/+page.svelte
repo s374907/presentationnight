@@ -1,5 +1,8 @@
 <script>   
-    import Page2 from "../slides/+2.svelte";
+    import Title from "../slides/title.svelte";
+    import Titlepic from "../slides/titlepic.svelte";
+    import Fullimage from "../slides/fullimage.svelte";
+
     $: outerWidth = 900;
     let page = 1
     function onKeyDown(e){
@@ -19,33 +22,32 @@ on:keydown|preventDefault={onKeyDown}
 
 {#if outerWidth > 800}
 <div class="color black">
-<h1 class="sticky top-0 z-50 text-white">Page {page}</h1>
+<h1 class="fixed bold top-5 left-5 z-50 text-white">Slide {page}</h1>
 </div>
 <main class="relative overflow-hidden ">
+
 {#if page <= 1}
-<div class="flex h-screen">
-    <div class="m-auto">
-<h1 class="text-9xl font-bold text-center center text-white">
-    Fabian's amazing presentation
-</h1>
-</div>
-</div>
+<Title title="Fabian's amazing presentation"></Title>
 {/if}
+
 {#if page == 2}
-<Page2/>
+<Titlepic title="The entire history of jojo" src='images/jojo_logo.jpg'/>
 {/if}
+
+{#if page == 3}
+<Fullimage src='images/stonemask.png'></Fullimage>
+{/if}
+
 </main>
 
 {:else}
-
-<div class="relative overflow-hidden top-">
-    <div class="m-auto">
+<div class="mt-10">
         <h1 class="text-xl font-bold text-center center text-white">
             You should listen to my presentation instead of being on your phone dummy
         </h1>
-    </div>
 </div>
-{/if}  
+{/if} 
+
   <style lang="postcss">
     main{
         margin-top: -24px;
