@@ -18,6 +18,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-device-info": "^1.0.0"
+		"svelte-device-info": "^1.0.0",
+		"tw-elements": "^1.0.0"
 	}
 }

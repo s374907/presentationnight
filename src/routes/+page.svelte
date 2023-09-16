@@ -2,11 +2,10 @@
     import Title from "../slides/title.svelte";
     import Titlepic from "../slides/titlepic.svelte";
     import Fullimage from "../slides/fullimage.svelte";
-
     $: outerWidth = 900;
     let page = 1
     function onKeyDown(e){
-        if(e.keyCode == 39){
+        if(e.keyCode == 39 && (page+1) != 64){
             page += 1
         }
         if(e.keyCode == 37  && (page-1) != 0){
@@ -110,7 +109,189 @@ on:keydown|preventDefault={onKeyDown}
 {/if}
 
 {#if page == 22}
-<Titlepic title="Part 1: Phantom blood"src='images/part1/phantom_blood.jpg'/>
+<Titlepic title="Part 2: Battle Tendency"src='images/part2/part2_logo.webp'/>
+{/if}
+
+{#if page == 23}
+<Fullimage src='images/part2/pillar_men.png'/>
+{/if}
+
+{#if page == 24}
+<Fullimage src='images/part2/JoJoNazis.webp'/>
+{/if}
+
+
+{#if page == 25}
+<Fullimage src='images/part2/joseph.jpg'/>
+{/if}
+
+
+{#if page == 26}
+<Fullimage src='images/part2/pillarman.png'/>
+{/if}
+
+
+{#if page == 27}
+<Fullimage src='images/part2/shotglass_deflect.png'/>
+{/if}
+
+
+{#if page == 28}
+<Fullimage src='images/part2/joseph_to_mexico.jpg'/>
+{/if}
+
+
+{#if page == 29}
+<Fullimage src='images/part2/joseph_sneaks_in.webp'/>
+{/if}
+
+
+{#if page == 30}
+<Fullimage src='images/part2/joseph_training.webp'/>
+{/if}
+
+
+{#if page == 31}
+<Fullimage src='images/part2/peeps.png'/>
+{/if}
+
+
+{#if page == 32}
+<Fullimage src='images/part2/kars_vulcano.png'/>
+{/if}
+
+
+{#if page == 33}
+<Fullimage src='images/part2/nohand.png'/>
+{/if}
+
+
+{#if page == 34}
+<Fullimage src='images/part2/redstone.png'/>
+{/if}
+
+
+{#if page == 35}
+<Fullimage src='images/part2/kars_outerspace.png'/>
+{/if}
+
+
+{#if page == 36}
+<Fullimage src='images/part2/funeral.jpg'/>
+{/if}
+
+{#if page == 37}
+<Titlepic title="Part 3: Stardust Crusaders" src='images/part3/jojologo.jpg'/>
+{/if}
+
+{#if page == 38}
+<Fullimage src='images/part3/jotaro_prison.webp'/>
+{/if}
+
+{#if page == 39}
+<Fullimage src='images/part3/joseph_next.jpg'/>
+{/if}
+
+
+{#if page == 40}
+<Fullimage src='images/part3/joseph_camera.jpg'/>
+{/if}
+
+{#if page == 41}
+<Fullimage src='images/part3/dio_pic.png'/>
+{/if}
+
+{#if page == 42}
+<Fullimage src='images/part3/punch_frog.jpg'/>
+{/if}
+
+{#if page == 43}
+<Fullimage src='images/part3/jojostands.png'/>
+{/if}
+
+{#if page == 44}
+<Fullimage src='images/part3/kak.jpg'/>
+{/if}
+
+{#if page == 45}
+<Fullimage src='images/part3/polanareff.png'/>
+{/if}
+
+{#if page == 46}
+<Fullimage src='images/part3/muhammaed.jpg'/>
+{/if}
+
+{#if page == 47}
+<Fullimage src='images/part3/hummamed_dies.jpg'/>
+{/if}
+
+{#if page == 48}
+<Fullimage src='images/part3/muhammed_returns.png'/>
+{/if}
+
+{#if page == 49}
+<Fullimage src='images/part3/avodol_dies_again.png'/>
+{/if}
+
+{#if page == 50}
+<Fullimage src='images/part3/iggy.jpg'/>
+{/if}
+
+{#if page == 51}
+<Fullimage src='images/part3/iggy_dies.jpg'/>
+{/if}
+
+{#if page == 52}
+<Fullimage src='images/part3/dio_and_jotaro.avif'/>
+{/if}
+
+{#if page == 53}
+<Fullimage src='images/part3/dio_stops_time.webp'/>
+{/if}
+
+
+{#if page == 54}
+<Fullimage src='images/part3/jotaro_stops_time.gif'/>
+{/if}
+
+
+{#if page == 55}
+<Fullimage src='images/part3/dio_dies.jpg'/>
+{/if}
+
+
+{#if page == 56}
+<Fullimage src='images/part3/marine_biologist.jpg'/>
+{/if}
+
+{#if page == 57}
+<Titlepic title="Part 4: Diamond Is Unbreakable" src='images/part4/jojologo.png'/>
+{/if}
+
+{#if page == 58}
+<Fullimage src='images/part4/part4.jpg'/>
+{/if}
+
+{#if page == 59}
+<Titlepic title="Part 5: Golden Wind" src='images/part5/logo.webp'/>
+{/if}
+
+{#if page == 60}
+<Fullimage src='images/part5/gang.jpg'/>
+{/if}
+
+
+{#if page == 61}
+<Fullimage src='images/part5/pineapple.avif'/>
+{/if}
+
+
+{#if page == 62}
+<Fullimage src='images/part5/king_crimson.jpg'/>
+{/if}
+
+{#if page >= 63}
+<Title title="That was all of JoJo"></Title>
 {/if}
 
 
