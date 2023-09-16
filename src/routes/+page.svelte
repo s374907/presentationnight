@@ -109,6 +109,9 @@ on:keydown|preventDefault={onKeyDown}
 <Fullimage src='images/part1/Erina_escapes.jpg'/>
 {/if}
 
+{#if page == 22}
+<Titlepic title="Part 1: Phantom blood"src='images/part1/phantom_blood.jpg'/>
+{/if}
 
 
 </main>
